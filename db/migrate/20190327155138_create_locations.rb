@@ -10,6 +10,7 @@ class CreateLocations < ActiveRecord::Migration[5.2]
       t.string :image
       t.string :area
       t.string :country
+      t.integer :creator
       t.timestamps
     end
   end

@@ -24,6 +24,6 @@ def update
 
 private
 def location_params
-  params.require(:location).permit(:name,:description,:latitude,:longitude,:category,:rating,:image,:area,:location)
+  params.require(:location).permit(:name,:description,:latitude,:longitude,:category,:rating,:image,:area,:country,:creator)
 end
 end
