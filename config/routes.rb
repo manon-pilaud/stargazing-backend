@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  resources :user_locations
-  resources :users
-  resources :locations
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+get 'auth_controller/create'
+namespace :api do
+  namespace :v1 do
+    resources :user_locations
+    resources :users
+    resources :locations
+    resources :users, only: [:create]
+        post '/login', to: 'auth#create'
+        get '/profile', to: 'users#profile'
+    end
+  end
 end

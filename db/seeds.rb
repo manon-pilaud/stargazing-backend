@@ -53,7 +53,7 @@ Location.create(name:"Snowdonia National Park",description:"Snowdonia National P
 
 Location.create(name:"Westhavelland",description:"Westhavelland Nature Park is the largest protected area in the German federal state of Brandenburg and comprises the largest contiguous wetland of any individual European country. The park is situated only 70 km west of Berlin, the most populous city in Germany, yet its sparse population and protected status put the experience of a dark night sky within easy reach of nearly six million people in the Berlin-Brandenburg Metropolitan Region. The Dark Sky Reserve consists of a mix of 750 square kilometers of public and private land within the park.",latitude:52.66797,longitude:12.43333,category:"Dark Sky Reserve",rating:3.8,image:"https://www.darksky.org/wp-content/uploads/2015/01/p1550321.jpg",area:"747.9 km2",country:"Germany",creator:1)
 
-User.create(name:"Mandy", user_type: "Admin")
+User.create(username:"Mandy", user_type: "Admin",password:"Hi")
 
 UserLocation.create(user_id:1,location_id:3)
 UserLocation.create(user_id:1,location_id:1)

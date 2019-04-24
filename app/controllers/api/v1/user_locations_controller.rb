@@ -1,4 +1,4 @@
-class UserLocationsController < ApplicationController
+class Api::V1::UserLocationsController < ApplicationController
   def index
     render json: UserLocation.all
   end
@@ -8,6 +8,7 @@ class UserLocationsController < ApplicationController
       user_location: UserLocation.find(params[:id])
     }
   end
+
 
   def create
     render json: UserLocation.create(user_location_params)
