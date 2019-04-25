@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
   def secret_key
-  'moodyMandy'
+  'hithere'
   end
 
   def encode(payload)

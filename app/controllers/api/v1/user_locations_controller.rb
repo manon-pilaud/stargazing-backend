@@ -11,7 +11,16 @@ class Api::V1::UserLocationsController < ApplicationController
 
 
   def create
-    render json: UserLocation.create(user_location_params)
+    token = request.headers['Authentication'].split(' ')[1]
+    user_id = decode(token)["user_id"]
+    @user_location = UserLocation.new(
+                location_id: params[:location_id],
+                user_id: user_id,
+                )
+    if @user_location.valid?
+        @user_location.save
+        render json: @user_location, status: :accepted
+    end
   end
 
   def update
